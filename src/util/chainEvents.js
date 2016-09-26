@@ -1,4 +1,4 @@
-import { has } from 'lodash/has';
+import { has } from 'lodash';
 import chain from 'chain-function';
 
 function chainEvents(events, objects) {
