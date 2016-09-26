@@ -104,7 +104,7 @@
     "react-formal-inputs": "^2.0.0",
     "react-pure-render-debug": "^1.1.1",
     "react-router": "^2.4.1",
-    "react-widgets": "^3.4.4",
+    "react-widgets": "git+https://github.com/KhoaNguy3n/react-widgets",
     "release-script": "^1.0.2",
     "rimraf": "^2.5.2",
     "sinon": "^1.17.4",

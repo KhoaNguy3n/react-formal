@@ -1,4 +1,4 @@
-import has from 'lodash/has';
+import { has } from 'lodash/has';
 import chain from 'chain-function';
 
 function chainEvents(events, objects) {
@@ -10,7 +10,7 @@ function chainEvents(events, objects) {
     let handlers = objects.map(p => p[event]);
     result[event] = chain(...handlers)
   })
-  
+
   return result
 }
 
