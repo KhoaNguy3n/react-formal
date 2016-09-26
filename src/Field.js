@@ -171,6 +171,7 @@ class Field extends React.Component {
   }
 
   render() {
+    console.log('props in Field', this.props);
     let {
         name
       , group
