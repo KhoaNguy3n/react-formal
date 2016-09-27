@@ -158,7 +158,7 @@ class Field extends React.Component {
     if (typeof children === 'function') {
       return children(fieldProps, Component)
     }
-
+    console.log('fieldProps', fieldProps);
     return (
       <Component
         {...fieldProps}
@@ -171,7 +171,6 @@ class Field extends React.Component {
   }
 
   render() {
-    console.log('props in Field', this.props);
     let {
         name
       , group
