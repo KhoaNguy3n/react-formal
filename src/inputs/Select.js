@@ -11,7 +11,10 @@ let toArray = React.Children.toArray || function (children) {
 
 class Select extends React.Component {
   static propTypes = {
-    value: React.PropTypes.number,
+    value: React.PropTypes.oneOfType([
+        React.PropTypes.number,
+        React.PropTypes.string
+    ]),
     multiple: React.PropTypes.bool,
     onChange: React.PropTypes.func,
     tagName: React.PropTypes.oneOfType([
@@ -46,12 +49,15 @@ class Select extends React.Component {
   render() {
     let { value, children, tagName = 'select', ...props } = this.props;
 
+    let rest = { ...props };
+    delete rest.defaultValue;
+
     if (value === null)
       value = props.multiple ? [] : '';
 
     return (
       <Input
-        {...props}
+        {...rest}
         tagName={tagName}
         value={value}
         onChange={this.handleChange}

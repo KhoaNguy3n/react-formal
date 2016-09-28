@@ -134,6 +134,7 @@ class Field extends React.Component {
 
     let fieldProps = mergeWithEvents(events, [
       { name },
+      { children },
       omit(this.props, Object.keys(Field.propTypes)),
       bindingProps,
       triggerProps
@@ -158,7 +159,7 @@ class Field extends React.Component {
     if (typeof children === 'function') {
       return children(fieldProps, Component)
     }
-    console.log('fieldProps', fieldProps);
+
     return (
       <Component
         {...fieldProps}
