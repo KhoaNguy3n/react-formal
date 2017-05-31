@@ -13,7 +13,6 @@ class Input extends React.Component {
     let {
         tagName: Tag = 'input'
       , value
-      , onChange
       , ...props } = this.props
 
     delete props.errors;
@@ -26,8 +25,7 @@ class Input extends React.Component {
       <Tag
         {...props}
         value={value}
-        onInput={e => this.props.onChange(e.target.value)}
-        onChange={() => {}}
+        onChange={e => props.onChange(e.target.value)}
       />
     );
   }
